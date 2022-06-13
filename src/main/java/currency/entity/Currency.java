@@ -8,13 +8,13 @@ import java.time.LocalDateTime;
 @Table(name ="currency")
 public class Currency {
     @Id
-    @GeneratedValue(generator = "increment")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
     @Column
     String name;
     @Column
     String description;
-    @Id
+   @Column
     String code;
     @Column(name = "create_time")
     LocalDateTime createTime;
@@ -67,5 +67,17 @@ public class Currency {
 
     public void setUpdateTime(LocalDateTime updateTime) {
         this.updateTime = updateTime;
+    }
+
+    @Override
+    public String toString() {
+        return "Currency{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", code='" + code + '\'' +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                '}';
     }
 }

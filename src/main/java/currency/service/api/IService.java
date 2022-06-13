@@ -1,6 +1,6 @@
-package currency.dao.api;
+package currency.service.api;
 
-public interface Idao <T>{
+public interface IService <T>{
     /**
      * создать запись в базе
      * @param t обьект для записи
@@ -26,8 +26,6 @@ public interface Idao <T>{
      * @param id
      */
     void delete (long id);
-
-
 
 
 }

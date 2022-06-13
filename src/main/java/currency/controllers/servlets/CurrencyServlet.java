@@ -1,5 +1,7 @@
 package currency.controllers.servlets;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -9,6 +11,7 @@ import java.io.IOException;
 
 @WebServlet(name = "CurrencyServlet", urlPatterns = "/currency")
 public class CurrencyServlet extends HttpServlet {
+    ObjectMapper mapper = new ObjectMapper();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         super.doGet(req, resp);
