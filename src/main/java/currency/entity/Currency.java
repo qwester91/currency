@@ -9,17 +9,17 @@ import java.time.LocalDateTime;
 public class Currency {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long id;
+    private long id;
     @Column
-    String name;
+    private String name;
     @Column
-    String description;
-   @Column
-    String code;
+    private  String description;
+    @Column
+    private String code;
     @Column(name = "create_time")
-    LocalDateTime createTime;
+    private LocalDateTime createTime;
     @Column(name = "update_time")
-    LocalDateTime updateTime;
+    private LocalDateTime updateTime;
 
     public Long getId() {
         return id;
